@@ -1,0 +1,43 @@
+name: Request write access
+description: Request temporary write access for the GitHub practice exercise.
+title: "Request write access: <your GitHub username>"
+labels:
+  - access-request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request temporary write access for the course exercise.
+
+        Do not include private company information, customer data, credentials, or personal details beyond what is needed for the course.
+  - type: input
+    id: github-username
+    attributes:
+      label: GitHub username
+      description: Enter the personal GitHub username you will use for the exercise.
+      placeholder: octocat
+    validations:
+      required: true
+  - type: input
+    id: first-name
+    attributes:
+      label: First name for skill folder
+      description: Enter the first name you will use in your skill folder name.
+      placeholder: amie
+    validations:
+      required: true
+  - type: input
+    id: cohort
+    attributes:
+      label: Course or cohort
+      description: Enter the course session, cohort name, or workshop date.
+      placeholder: June workshop
+    validations:
+      required: true
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Public-safe agreement
+      options:
+        - label: I understand this repo is public practice material and I will not add personal, company, customer, credential, or sensitive information.
+          required: true
