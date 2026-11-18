@@ -10,8 +10,8 @@ The workflow asks these nine questions, in this order:
 |---|----------|------------|----------|
 | 01 | **Event name:** What is the event called? | Short text | Yes |
 | 02 | **Preferred dates:** What dates or date ranges work? List backups too. | Short text | Yes |
-| 03 | **Estimated attendance:** About how many people will attend? | Dropdown: 1–25, 26–75, 76–150, 151+ | Yes |
-| 04 | **Location preferences:** Where should it happen? | Dropdown: In person, Virtual, Hybrid, plus a short-text note for city or venue ideas | No |
+| 03 | **Estimated attendance:** About how many people will attend? | Short text | Yes |
+| 04 | **Location preferences:** Where should it happen? Add 2 to 3 location preferences in order of preference. | Short text | No |
 | 05 | **Location considerations:** Add details that give more weight to your location preferences. Example: "We want Seattle because half of the team is located in Seattle." | Long text | No |
 | 06 | **Purpose:** Why are we holding this event? | Long text | Yes |
 | 07 | **Desired outcomes:** What should attendees leave with or do afterward? | Long text | Yes |
@@ -38,7 +38,7 @@ Use it when you want to practice designing a Slack intake workflow, or when you 
    01 Event name: {event_name}
    02 Preferred dates: {preferred_dates}
    03 Estimated attendance: {estimated_attendance}
-   04 Location preferences: {location_format} – {location_notes}
+   04 Location preferences: {location_preferences}
    05 Location considerations: {location_considerations}
    06 Purpose: {purpose}
    07 Desired outcomes: {desired_outcomes}
@@ -66,8 +66,8 @@ Run the CTO Events Intake workflow mockup with this fictional request:
 
 Event name: Robot Builders Tech Talk Series
 Preferred dates: Week of March 9, backup the week of March 16
-Estimated attendance: 76–150
-Location preferences: Hybrid, a downtown event space in Sample City
+Estimated attendance: About 120
+Location preferences: 1) Sample City, 2) Example Town, 3) Virtual
 Location considerations: We want Sample City because most of the speakers already live there.
 Purpose: Host a fall tech talk series on building with robots.
 Desired outcomes: Engineers share three demo projects and sign up for a hack week.
