@@ -2,55 +2,61 @@
 
 This is a practice repository for learning the GitHub contribution flow.
 
-You will use Codex, Claude Code, or another coding assistant to explore this repo, create a fake skill, push your work on a branch, open a pull request, receive instructor approval, and merge.
+> **Heads up: use a fork.** The owner of this repo is on leave through the end of Q1 2027, so nobody is granting write access right now. Fork the repo and open your pull request from your fork, as described below. Please don't open access requests.
+
+You will use Codex, Claude Code, or another coding assistant to fork this repo, explore it, create a fake skill, push your work to a branch on your fork, and open a pull request back to this repo.
 
 Everything in this repo is fictional. Do not use personal context, private files, customer data, credentials, company information, internal workflows, or anything sensitive. The goal is to practice GitHub, not to build a real production skill.
 
 ## What You Will Practice
 
-- Requesting temporary write access to a repo.
-- Cloning a shared repository.
+- Forking a repo (making your own copy on GitHub).
+- Cloning your fork to your computer.
 - Asking a coding tool to explain an unfamiliar repo.
 - Creating a branch.
 - Authoring a small Markdown-based skill.
 - Committing and pushing changes.
-- Opening a pull request.
-- Responding to instructor review.
-- Merging after approval.
+- Opening a pull request from your fork back to this repo.
+- (Optional) Merging a pull request in your own fork.
 
 ## Learner Flow
 
-1. Request write access by opening a "Request write access" issue in this repo.
-2. Wait for the instructor to invite your personal GitHub account as a temporary collaborator.
-3. Accept the GitHub collaborator invitation.
-4. Clone the shared repo:
+1. Fork this repo. Near the top right of this page, click **Fork**, then click **Create fork**. Your copy lives at `https://github.com/<your-username>/practice-github-skills`.
+
+   If you have the GitHub CLI installed, you can fork and clone in one step instead:
 
    ```bash
-   git clone https://github.com/aninhTT/practice-github-skills.git
+   gh repo fork aninhTT/practice-github-skills --clone
+   ```
+
+2. Clone your fork (skip this if you used `gh repo fork --clone`):
+
+   ```bash
+   git clone https://github.com/<your-username>/practice-github-skills.git
    cd practice-github-skills
    ```
 
-5. Open the repo in Codex or Claude Code.
-6. Ask your coding tool to explain the repo:
+3. Open the repo in Codex or Claude Code.
+4. Ask your coding tool to explain the repo:
 
    ```text
    What is in this repo? Explain the folder structure and tell me what kind of fake skill I should add for this GitHub practice exercise.
    ```
 
-7. Create a branch. Use your first name and a short skill idea:
+5. Create a branch. Use your first name and a short skill idea:
 
    ```bash
    git switch -c add-amie-spreadsheet-cleaner
    ```
 
-8. Ask your coding tool to create one fake skill:
+6. Ask your coding tool to create one fake skill:
 
    ```text
    Create one fake, public-safe skill for this practice repo. My first name is Amie. The skill should be about cleaning spreadsheet data. Follow the README, AGENTS.md, and CLAUDE.md instructions. Do not use personal, company, customer, or real private context.
    ```
 
-9. Review the change locally.
-10. Commit and push your branch:
+7. Review the change locally.
+8. Commit and push your branch to your fork:
 
     ```bash
     git add skills/<your-skill-folder>/SKILL.md
@@ -58,9 +64,9 @@ Everything in this repo is fictional. Do not use personal context, private files
     git push -u origin <your-branch-name>
     ```
 
-11. Open a pull request into `main`.
-12. Wait for instructor approval.
-13. After approval and passing checks, merge the pull request.
+9. Open a pull request from your fork into `main` on `aninhTT/practice-github-skills`. After you push, your fork shows a **Compare & pull request** button.
+10. Your pull request will stay open for now. You can't merge into this repo yourself, and pull requests won't be reviewed until the owner is back after Q1 2027. That's expected, and you're done.
+11. Optional: to practice merging, open a second pull request inside your fork (your branch into your fork's own `main`) and merge it yourself. This changes only your copy.
 
 ## Skill Naming Rules
 
@@ -167,17 +173,18 @@ Create one fake skill under skills/<first-name>-<skill-name>/SKILL.md. Follow th
 Prepare the pull request:
 
 ```text
-Review my changes, confirm they follow the repo rules, then help me commit, push my branch, and open a pull request.
+Review my changes, confirm they follow the repo rules, then help me commit, push my branch to my fork, and open a pull request from my fork to aninhTT/practice-github-skills.
 ```
 
 ## Instructor Notes
 
-For the intended course flow:
+While the owner is on leave (through the end of Q1 2027), learners contribute through forks. No collaborator access is granted, and pull requests from forks stay open until review resumes. Learners who were already collaborators can still push branches directly.
 
-- Add learners as temporary collaborators with write access after they request it.
+Repo settings:
+
 - Protect `main`.
 - Require a pull request before merge.
 - Require one approving review.
 - Require the validation workflow to pass.
 - Allow squash merge only.
-- Remove learner write access after the course or exercise is complete.
+- Remove learner write access after the course or exercise is complete (for learners added before the fork flow).

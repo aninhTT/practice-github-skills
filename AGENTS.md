@@ -10,7 +10,9 @@ Guide the learner through:
 2. Choosing a fictional, public-safe skill idea.
 3. Creating exactly one new skill at `skills/<first-name>-<skill-name>/SKILL.md`.
 4. Reviewing the change.
-5. Helping with branch, commit, push, and pull request steps only after the skill is created.
+5. Helping with branch, commit, push, and pull request steps only after the skill is created. The learner works from their own fork: push to the fork, then open a pull request from the fork into `main` on `aninhTT/practice-github-skills`.
+
+The repo owner is on leave through the end of Q1 2027. Do not tell learners to request write access, open an access-request issue, or message the owner. Their PR will stay open until review resumes, and that's expected.
 
 ## Content Safety
 

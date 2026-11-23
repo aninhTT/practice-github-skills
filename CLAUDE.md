@@ -48,12 +48,16 @@ Invent fictional examples. Keep everything safe for a public GitHub repository.
 
 The expected flow is:
 
-1. Create a branch.
-2. Add one fake skill.
-3. Commit.
-4. Push the branch.
-5. Open a pull request.
-6. Wait for instructor approval.
-7. Merge after approval.
+1. Fork the repo (Fork button on GitHub, or `gh repo fork` if the learner has the GitHub CLI).
+2. Clone the learner's fork, not `aninhTT/practice-github-skills`.
+3. Create a branch.
+4. Add one fake skill.
+5. Commit.
+6. Push the branch to the learner's fork.
+7. Open a pull request from the fork into `main` on `aninhTT/practice-github-skills`.
+8. Tell the learner the PR will stay open until the repo owner is back after Q1 2027, and that they're done.
+9. Optional, only if the learner asks: open a second PR inside their fork (branch into the fork's `main`) and help them merge it.
 
 Do not recommend direct pushes to `main`.
+
+The repo owner is on leave through the end of Q1 2027. Do not tell learners to request write access, open an access-request issue, or message the owner.

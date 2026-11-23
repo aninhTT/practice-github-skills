@@ -6,10 +6,10 @@ This repo is public and fictional. Your contribution should be a fake skill that
 
 ## Before You Start
 
-1. Open a "Request write access" issue.
-2. Wait for the instructor to invite your GitHub account.
-3. Accept the collaborator invitation.
-4. Clone the repo.
+You don't need write access. The repo owner is on leave through the end of Q1 2027, so contributions come from forks.
+
+1. Fork the repo: click **Fork** near the top right of the repo page, then **Create fork**.
+2. Clone your fork: `git clone https://github.com/<your-username>/practice-github-skills.git`
 
 ## Contribution Steps
 
@@ -25,7 +25,7 @@ Add one skill:
 skills/<first-name>-<skill-name>/SKILL.md
 ```
 
-Commit and push:
+Commit and push to your fork:
 
 ```bash
 git add skills/<first-name>-<skill-name>/SKILL.md
@@ -33,7 +33,7 @@ git commit -m "Add <first-name>-<skill-name>"
 git push -u origin add-<first-name>-<skill-name>
 ```
 
-Open a pull request into `main`, then wait for instructor approval.
+Open a pull request from your fork into `main` on `aninhTT/practice-github-skills`. It will stay open until review resumes after Q1 2027, and that's expected.
 
 ## Review Checklist
 
@@ -47,6 +47,8 @@ Before opening your PR, confirm:
 - You did not include personal, company, customer, or sensitive information.
 - You did not push directly to `main`.
 
-## After Approval
+## After You Open Your PR
 
-After your PR is approved and checks pass, merge the PR using the option provided by GitHub.
+You can't merge into this repo yourself. Your PR will be reviewed after the owner is back.
+
+Optional: to practice merging, open a second pull request inside your fork (your branch into your fork's own `main`) and merge it there.
